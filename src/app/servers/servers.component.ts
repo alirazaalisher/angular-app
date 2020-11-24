@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-servers',
+  // Common selector
+  //selector: 'app-servers',
+
+  // Attribute selector
+  //selector: '[app-servers]',
+
+  //  Class selector
+  selector: '.app-servers',
+
   templateUrl: './servers.component.html',
-  styleUrls: ['./servers.component.scss']
+  styleUrls: ['./servers.component.scss'],
 })
 export class ServersComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
