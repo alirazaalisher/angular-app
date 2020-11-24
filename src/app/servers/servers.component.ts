@@ -17,6 +17,7 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'Server was not Created';
   serverName = 'Test Server';
+  userName = '';
   constructor() {}
 
   ngOnInit(): void {
@@ -29,5 +30,16 @@ export class ServersComponent implements OnInit {
   }
   onUpdateServerName(event: any) {
     this.serverName = (<HTMLInputElement>event.target).value;
+  }
+
+  isUserNameEmpty() {
+    if (this.userName == '') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  onUpdateUserName() {
+    this.userName = '';
   }
 }
