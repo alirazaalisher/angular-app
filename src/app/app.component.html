@@ -1,23 +1,13 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <h3> Welcome {{title}}</h3>
-            <hr>
-            <!-- Common selector 
-            <app-servers></app-servers> -->
-
-            <!-- Attribute selector 
-            <div app-servers></div>-->      
-             <!-- Class selector -->
-            <div class="app-servers"></div>
-            <!-- <input type="text"
-                class="form-control" 
-                [(ngModel)]="userName"
-                > -->
-                <!-- <p>{{userName}}</p> -->
-
-            <!-- <button (click)="userName = ''" class="btn btn-primary" [disabled]="userName ===''">Reset User</button> -->
-
+        <!-- <button (click)= "showSecret = !showSecret" class="btn btn-primary">Display Details</button> -->
+        <button (click)= "onToggleDetails()" class="btn btn-primary">Display Details</button>
+        <p *ngIf="showSecret">Secret Password = tuna</p>
+        <div *ngFor= "let log of logs"
+        [ngStyle]="{backgroundColor: log >= 5 ? 'blue':'transparent'}"
+        [ngClass]="{'white-text':log>=5}"
+        >{{log}}</div>
         </div>
     </div>
 </div>
